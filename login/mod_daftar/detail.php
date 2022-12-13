@@ -8,10 +8,6 @@
         <div class="card author-box card-primary">
             <div class="card-header">
                 <h4>Data Pendaftar</h4>
-                <div class="card-header-action">
-                    <a target="_blank" href="mod_daftar/print_daftar.php?id=<?= $_GET['id'] ?>" type="button" class="btn btn-success"><i class="fas fa-print    "></i> Cetak Form</a>
-                    <a target="_blank" href="mod_daftar/pernyataan.php?id=<?= $_GET['id'] ?>" type="button" class="btn btn-success"><i class="fas fa-print    "></i> Surat Pernyataan</a>
-                </div>
 
             </div>
             <div class="card-body">

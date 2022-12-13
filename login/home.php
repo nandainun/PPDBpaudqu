@@ -1,5 +1,5 @@
 <div class='row'>
-    <div class="col-lg-4">
+    <div class="col-lg-6">
         <div class="small-box bg-blue">
             <div class="inner">
                 <h3> <?= rowcount($koneksi, 'daftar') ?></h3>
@@ -11,7 +11,7 @@
             <a href="?pg=daftar" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-6">
         <div class="small-box bg-red">
             <div class="inner">
                 <h3><?= rowcount($koneksi, 'jurusan') ?></h3>
@@ -19,19 +19,6 @@
             </div>
             <div class="icon">
                 <i class="fa fa-flask"></i>
-            </div>
-            <a href="?pg=jurusan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="small-box bg-green">
-            <div class="inner">
-                <h3> <?php $kuota = mysqli_fetch_array(mysqli_query($koneksi, "select *, sum(kuota) as kuota from jurusan"));
-                        echo $kuota['kuota']; ?></h3>
-                <p>Jumlah Kuota</p>
-            </div>
-            <div class="icon">
-                <i class="fa fa-school"></i>
             </div>
             <a href="?pg=jurusan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>

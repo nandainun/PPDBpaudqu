@@ -354,18 +354,29 @@ QRcode::png($codeContents, $tempdir . $siswa['nisn'] . '.png', QR_ECLEVEL_M, 4);
 		</table>
 		<br>
 		<br>
-		<table>
-			<tr width="30%">
-				<td>
-					<font size="13px">
+		<br>
+		<table width="100% " style="margin-left: 20px;margin-right:20px;font-size:12px">
+			<tr>
 
-						<p>__________</p>, <?= date('d-M-Y ') ?>
-						<p>Orang Tua</p>
-						<br></br>
-						<p>__________________
-						<p>
+				<td width="60% ">
 
-					</font>
+					<p>Panitia PPDB</p>
+					<br><br><br>
+					......................
+					<p></p>
+
+
+
+
+				<td width="40%">
+					______________, <?= date('d-M-Y ') ?>
+					<p>Kepala <?= $setting['nama_sekolah'] ?></p>
+					<br><br><br>
+					<?= $setting['kepala'] ?>
+					<p></p>
+
+				</td>
+
 			</tr>
 		</table>
 

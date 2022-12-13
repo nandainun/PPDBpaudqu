@@ -196,13 +196,6 @@
                                                                         <span class="custom-switch-indicator"></span>
                                                                         <span class="custom-switch-description">Diterima</span>
                                                                     </label>
-                                                                    <label class="custom-switch">
-                                                                        <input type="radio" name="status" value="2" class="custom-switch-input">
-                                                                        <span class="custom-switch-indicator"></span>
-                                                                        <span class="custom-switch-description">Dicadangkan</span>
-                                                                    </label>
-
-
                                                                 </div>
                                                             </div>
                                                         </div>

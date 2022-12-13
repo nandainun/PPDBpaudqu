@@ -93,7 +93,7 @@ if ($pg == 'status') {
     $nama = str_replace("'", "`", $_POST['nama']);
     $data = [
         'nisn' => $_POST['nisn'],
-        'nama' => ucwords(strtoupper($nama)),
+        'nama' => $nama,
         'tempat_lahir' => $_POST['tempat_lahir'],
         'tgl_lahir' => $_POST['tgl_lahir'],
         'no_hp' => str_replace(" ", "", $_POST['no_hp']),

@@ -41,10 +41,6 @@
                             <label>Keterangan</label>
                             <input type="text" name="ket" class="form-control" required="">
                         </div>
-                        <div class="form-group">
-                            <label>Kuota</label>
-                            <input type="number" name="kuota" class="form-control" required="">
-                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -72,12 +68,11 @@
                                 <th class="text-center">
                                     No
                                 </th>
-                                <th>Nama jurusan</th>
+                                <th>Nama Kelas</th>
                                 <th>Umur</th>
                                 <th>Jam Kelas</th>
                                 <th>Kelompok</th>
                                 <th>Keterangan</th>
-                                <th>Kuota</th>
                                 <th>status</th>
                                 <th>Action</th>
                             </tr>
@@ -96,7 +91,6 @@
                                     <td><?= $jurusan['jam_kelas'] ?></td>
                                     <td><?= $jurusan['kelompok'] ?></td>
                                     <td><?= $jurusan['ket'] ?></td>
-                                    <td><?= $jurusan['kuota'] ?></td>
                                     <td>
                                         <?php if ($jurusan['status'] == 1) { ?>
                                             <span class="badge badge-success">Aktif</span>
@@ -125,31 +119,27 @@
                                                         <div class="modal-body">
                                                             <input type="hidden" value="<?= $jurusan['id_jurusan'] ?>" name="id_jurusan" class="form-control" required="">
                                                             <div class="form-group">
-                                                                <label>Nama jurusan</label>
+                                                                <label>Nama Kelas</label>
                                                                 <input type="text" name="nama" value="<?= $jurusan['nama_jurusan'] ?>" class="form-control" required="">
                                                             </div>
                                                             <div class="form-group">
-                                                                <label>Nama jurusan</label>
-                                                                <input type="text" name="nama" value="<?= $jurusan['nama_jurusan'] ?>" class="form-control" required="">
+                                                                <label>Umur</label>
+                                                                <input type="text" name="umur" value="<?= $jurusan['umur'] ?>" class="form-control" required="">
                                                             </div>
                                                             <div class="form-group">
-                                                                <label>Nama jurusan</label>
-                                                                <input type="text" name="nama" value="<?= $jurusan['nama_jurusan'] ?>" class="form-control" required="">
+                                                                <label>Jam Kelas</label>
+                                                                <input type="text" name="jam_kelas" value="<?= $jurusan['jam_kelas'] ?>" class="form-control" required="">
                                                             </div>
                                                             <div class="form-group">
-                                                                <label>Nama jurusan</label>
-                                                                <input type="text" name="nama" value="<?= $jurusan['nama_jurusan'] ?>" class="form-control" required="">
+                                                                <label>Kelompok</label>
+                                                                <input type="text" name="kelompok" value="<?= $jurusan['kelompok'] ?>" class="form-control" required="">
                                                             </div>
                                                             <div class="form-group">
-                                                                <label>Nama jurusan</label>
-                                                                <input type="text" name="nama" value="<?= $jurusan['nama_jurusan'] ?>" class="form-control" required="">
+                                                                <label>Keterangan</label>
+                                                                <input type="text" name="ket" value="<?= $jurusan['ket'] ?>" class="form-control" required="">
                                                             </div>
                                                             <div class="form-group">
-                                                                <label>Kuota</label>
-                                                                <input type="number" name="kuota" value="<?= $jurusan['kuota'] ?>" class="form-control" required="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <div class="control-label">Status jurusan</div>
+                                                                <div class="control-label">Status Kelas</div>
                                                                 <label class="custom-switch mt-2">
                                                                     <input type="checkbox" name="status" class="custom-switch-input" value='1' <?php if ($jurusan['status'] == 1) {
                                                                                                                                                     echo "checked";

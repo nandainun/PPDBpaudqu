@@ -5,7 +5,7 @@ header("Content-type: application/vnd-ms-excel");
 header("Content-Disposition: attachment; filename=datasemua_pembayaran.xls");
 ?>
 
-<table style="font-size: 12px" class="table table-striped table-sm" id="table-1">
+<table border="1" style="font-size: 12px" class="table table-striped table-sm" id="table-1">
     <thead>
         <tr>
             <th class="text-center">
@@ -13,7 +13,6 @@ header("Content-Disposition: attachment; filename=datasemua_pembayaran.xls");
             </th>
             <th>No Transaksi</th>
             <th>Nama Pendaftar</th>
-            <th>Asal Sekolah</th>
             <th>Jumlah Bayar</th>
             <th>Tgl Bayar</th>
             <th>Status</th>
@@ -29,10 +28,9 @@ header("Content-Disposition: attachment; filename=datasemua_pembayaran.xls");
         ?>
             <tr>
                 <td><?= $no; ?></td>
-                <td><?= $daftar['id_bayar'] ?></td>
+                <td class="str"><?= $daftar['id_bayar'] ?></td>
                 <td><?= $daftar['nama'] ?></td>
-                <td><?= $daftar['asal_sekolah'] ?></td>
-                <td><?= $daftar['jumlah'] ?></td>
+                <td><?= "Rp " . number_format($daftar['jumlah_bayar'], 0, ",", ".") ?></td>
                 <td><?= $daftar['tgl_bayar'] ?></td>
                 <td>
                     <?php if ($daftar['verifikasi'] == 1) { ?>

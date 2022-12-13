@@ -9,8 +9,12 @@ if (!isset($_SESSION['id_user'])) {
 if ($pg == 'ubah') {
     $status = (isset($_POST['status'])) ? 1 : 0;
     $data = [
+        'id_jurusan'     => $_POST['id_jurusan'],
         'nama_jurusan' => $_POST['nama'],
-        'kuota'        => $_POST['kuota'],
+        'umur'           => $_POST['umur'],
+        'jam_kelas'      => $_POST['jam_kelas'],
+        'kelompok'       => $_POST['kelompok'],
+        'ket'            => $_POST['ket'],
         'status'       => $status
     ];
     $id_jurusan = $_POST['id_jurusan'];
@@ -24,7 +28,6 @@ if ($pg == 'tambah') {
         'jam_kelas'      => $_POST['jam_kelas'],
         'kelompok'       => $_POST['kelompok'],
         'ket'            => $_POST['ket'],
-        'kuota'          => $_POST['kuota'],
         'status'         => 1
     ];
     $exec = insert($koneksi, 'jurusan', $data);

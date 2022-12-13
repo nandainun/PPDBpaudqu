@@ -56,14 +56,14 @@ QRcode::png($codeContents, $tempdir . $id_bayar . '.png', QR_ECLEVEL_L, 3, 6);
         <tbody>
             <tr>
                 <td><?= $siswa['nama'] ?></td>
-                <td><?= "Rp " . number_format($bayar['jumlah'], 2, ",", ".") ?></td>
+                <td><?= "Rp " . number_format($bayar['jumlah_bayar'], 2, ",", ".") ?></td>
                 <td><?= $bayar['tgl_bayar'] ?></td>
             </tr>
         </tbody>
     </table>
     <div class="row">
         <div>
-            <h5>Terbilang : <?= terbilang($bayar['jumlah'], 2) ?></h5>
+            <h5>Terbilang : <?= terbilang($bayar['jumlah_bayar'], 2) ?></h5>
             <small>Print Date : <?= date('Y-m-d H:i:s') ?></small>
         </div>
         <div style="text-align: right">
