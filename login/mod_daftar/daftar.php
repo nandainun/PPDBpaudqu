@@ -84,7 +84,6 @@
                                 <th>Nama Pendaftar</th>
                                 <th>L/P</th>
                                 <th>No Hp</th>
-                                <th>Umur</th>
                                 <th>Kelas</th>
                                 <th>Alamat</th>
                                 <th>Status</th>
@@ -108,15 +107,7 @@
                                         <a target="_blank" href="https://api.whatsapp.com/send?phone=62<?= $daftar['no_hp'] ?>&text=Terima kasih telah mendaftar di <?= $setting['nama_sekolah'] ?>. Silahkan Login untuk melengkapi formulir pendaftaran dengan username *<?= $daftar['nisn'] ?>%2A%0Apassword%20%3A%20%2A<?= $daftar['password'] ?>%2A">
                                             <?= $daftar['no_hp'] ?></a>
                                     </td>
-                                    <td>
-                                        <?php
-                                        $lahir    = new DateTime($daftar['tgl_lahir']);
-                                        $today        = new DateTime();
-                                        $umur = $today->diff($lahir);
-                                        echo $umur->y;
-                                        echo " Tahun";
-                                        ?>
-                                    </td>
+
                                     <td>
                                         <?php
                                         $lahir    = new DateTime($daftar['tgl_lahir']);
@@ -172,6 +163,7 @@
                                                         <div class="modal-body">
 
                                                             <input type="hidden" value="<?= $daftar['id_daftar'] ?>" name="id_daftar" class="form-control" required="">
+                                                            <input type="hidden" value="<?= $daftar['nisn'] ?>" name="nisn" class="form-control" required="">
 
                                                             <div class="form-group">
                                                                 <label>Nama Siswa</label>
@@ -237,30 +229,6 @@
                                                 iziToast.success({
                                                     title: 'OKee!',
                                                     message: 'Status Berhasil diubah',
-                                                    position: 'topRight'
-                                                });
-                                                setTimeout(function() {
-                                                    window.location.reload();
-                                                }, 2000);
-                                                $('#modal-edit<?= $no ?>').modal('hide');
-                                                //$('#bodyreset').load(location.href + ' #bodyreset');
-                                            }
-                                        });
-                                        return false;
-                                    });
-                                </script>
-                                <script>
-                                    $('#form-nilai<?= $no ?>').submit(function(e) {
-                                        e.preventDefault();
-                                        $.ajax({
-                                            type: 'POST',
-                                            url: 'mod_daftar/crud_daftar.php?pg=nilai',
-                                            data: $(this).serialize(),
-                                            success: function(data) {
-
-                                                iziToast.success({
-                                                    title: 'OKee!',
-                                                    message: 'Nilai Berhasil ditambah',
                                                     position: 'topRight'
                                                 });
                                                 setTimeout(function() {

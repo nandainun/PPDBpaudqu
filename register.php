@@ -45,11 +45,11 @@ require "config/functions.crud.php";
 						</div>
 						<form id="form-daftar">
 							<div class="card-body">
-								<input type="date" name="tgl_daftar" class="form-control datepicker" value="<?= $daftar['tgl_daftar'] ?>" hidden>
-								<div class="form-row">
-									<label for="asal">Pilih Kelas</label>
+
+								<div class="form-group">
+									<label for="asal">JURUSAN / PEMINATAN</label>
 									<select class="form-control select2" style="width: 100%" name="jurusan" id="jurusan">
-										<option value=""></option>
+										<option value="">Pilih Jurusan</option>
 										<?php $qu = mysqli_query($koneksi, "select * from jurusan");
 										while ($jur = mysqli_fetch_array($qu)) {
 										?>
@@ -58,10 +58,33 @@ require "config/functions.crud.php";
 
 									</select>
 								</div>
-								<div class="form-group">
-									<label for="nama">NAMA LENGKAP ANAK*</label>
-									<input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autocomplete="off" required>
+
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="jenis">JENIS PENDAFTARAN</label>
+										<select class="form-control" name="jenis" id="jenis">
+											<option value="1">Siswa Baru</option>
+											<option value="2">Pindahan</option>
+										</select>
+									</div>
+									<input type="hidden" class="form-control datepicker" name="tgl_daftar" required>
+									<div class="form-group col-md-6">
+										<label for="nisn">NISN* Sebagai Username Anda</label>
+										<input type="number" maxlength="10" class="form-control" name="nisn" placeholder="NISN" autocomplete="off" required>
+									</div>
 								</div>
+
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="nama">NAMA LENGKAP*</label>
+										<input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autocomplete="off" required>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="nohp">NO HANDPHONE</label>
+										<input type="number" class="form-control" name="nohp" placeholder="No HP Whatsapp" required>
+									</div>
+								</div>
+
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label for="tempat">TEMPAT LAHIR</label>
@@ -72,14 +95,6 @@ require "config/functions.crud.php";
 										<input type="date" class="form-control datepicker" name="tgllahir" required>
 									</div>
 
-								</div>
-								<div class="form-group">
-									<label for="nohp">NO HANDPHONE</label>
-									<input type="number" class="form-control" name="nohp" placeholder="No HP Whatsapp" required>
-								</div>
-								<div class="form-group">
-									<label for="nisn">USERNAME sebagai LOGIN</label>
-									<input type="text" class="form-control" name="nisn" placeholder="Username" autocomplete="off" required>
 								</div>
 								<div class="form-group">
 									<label for="inputPassword4">PASSWORD (Mohon Diingat!)</label>
@@ -109,23 +124,32 @@ require "config/functions.crud.php";
 						</div>
 						<form id="form-daftar2">
 							<div class="card-body">
-								<input type="date" name="tgl_daftar" class="form-control datepicker" value="<?= $daftar['tgl_daftar'] ?>" hidden>
-								<div class="form-row">
-									<label for="asal">Pilih Kelas</label>
-									<select class="form-control select2" style="width: 100%" name="jurusan" id="jurusan">
-										<option value=""></option>
-										<?php $qu = mysqli_query($koneksi, "select * from jurusan");
-										while ($jur = mysqli_fetch_array($qu)) {
-										?>
-											<option value="<?= $jur['id_jurusan'] ?>"> <?= $jur['nama_jurusan'] ?></option>
-										<?php } ?>
 
-									</select>
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="jenis">JENIS PENDAFTARAN</label>
+										<select class="form-control" name="jenis" id="jenis">
+											<option value="1">Siswa Baru</option>
+											<option value="2">Pindahan</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="nisn">NISN* Sebagai Username Anda</label>
+										<input type="number" maxlength="10" class="form-control" name="nisn" placeholder="NISN" autocomplete="off" required>
+									</div>
 								</div>
-								<div class="form-group">
-									<label for="nama">NAMA LENGKAP ANAK*</label>
-									<input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autocomplete="off" required>
+
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="nama">NAMA LENGKAP*</label>
+										<input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autocomplete="off" required>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="nohp">NO HANDPHONE</label>
+										<input type="number" class="form-control" name="nohp" placeholder="No HP Whatsapp" required>
+									</div>
 								</div>
+
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label for="tempat">TEMPAT LAHIR</label>
@@ -136,14 +160,6 @@ require "config/functions.crud.php";
 										<input type="date" class="form-control datepicker" name="tgllahir" required>
 									</div>
 
-								</div>
-								<div class="form-group">
-									<label for="nohp">NO HANDPHONE</label>
-									<input type="number" class="form-control" name="nohp" placeholder="No HP Whatsapp" required>
-								</div>
-								<div class="form-group">
-									<label for="nisn">USERNAME sebagai LOGIN</label>
-									<input type="text" class="form-control" name="nisn" placeholder="Username" autocomplete="off" required>
 								</div>
 								<div class="form-group">
 									<label for="inputPassword4">PASSWORD (Mohon Diingat!)</label>

@@ -96,8 +96,6 @@ if ($pg == 'status') {
         'nama' => ucwords(strtoupper($nama)),
         'tempat_lahir' => $_POST['tempat_lahir'],
         'tgl_lahir' => $_POST['tgl_lahir'],
-        'asal_sekolah' => $_POST['asal'],
-        'npsn_asal' => $_POST['npsn_asal'],
         'no_hp' => str_replace(" ", "", $_POST['no_hp']),
         'status' => $status
     ];

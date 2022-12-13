@@ -60,7 +60,6 @@
 								Login
 							</button>
 						</div>
-						<p><small>Support By Candy CBT v2.8.0 r3</small></p>
 					</div>
 
 

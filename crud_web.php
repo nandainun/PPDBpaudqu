@@ -27,7 +27,6 @@ if ($pg == 'simpan') {
             'no_daftar' => $newID,
             'nisn' => $_POST['nisn'],
             'nama' => $nama,
-            'jurusan' => $_POST['jurusan'],
             'no_hp' => $_POST['nohp'],
             'tempat_lahir' => ucwords($_POST['tempat']),
             'tgl_lahir' => $_POST['tgllahir'],
@@ -78,11 +77,11 @@ if ($pg == 'simpan2') {
             'no_daftar' => $newID,
             'nisn' => $_POST['nisn'],
             'nama' => $nama,
-            'jurusan' => $_POST['jurusan'],
             'no_hp' => $_POST['nohp'],
             'tempat_lahir' => ucwords($_POST['tempat']),
             'tgl_lahir' => $_POST['tgllahir'],
             'password' => $_POST['password'],
+            'tgl_daftar' => $_POST['tgl_daftar'],
             'foto' => 'default.png'
         ];
         $cek = rowcount($koneksi, 'daftar', ['nisn' => $_POST['nisn']]);
