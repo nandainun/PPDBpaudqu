@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Login | APLIKASI UJIAN ONLINE</title>
+	<title>Login | APLIKASI ONLINE</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->

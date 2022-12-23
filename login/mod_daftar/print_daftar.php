@@ -362,10 +362,7 @@ QRcode::png($codeContents, $tempdir . $siswa['nisn'] . '.png', QR_ECLEVEL_M, 4);
 
 				<td width="60% ">
 
-					<p>Panitia PPDB</p>
-					<br><br><br>
-					......................
-					<p></p>
+
 
 
 

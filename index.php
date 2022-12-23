@@ -30,7 +30,6 @@ RpiW7: ?>
                                                     echo $setting["\156\157\154\x69\x76\x65\143\150\x61\x74"];
                                                     goto RpiW7;
                                                     xtz5T: ?>
-        <div style='left: -1988px; position: absolute; top: -1999px;'><a href='https://www.candilkuya.com/'>Candil Kuya</a> </div>
     </div>
 </div>
 <div class="loader">
